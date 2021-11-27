@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .gallery {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 2vh;
+            grid-auto-flow: dense;
+        }
+        .gallery .image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        .gallery .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+            filter: brightness(0.5) grayscale(1);
+            transition: 0.3s ease-in-out;
+        }
+        .gallery .image img:hover {
+            filter: brightness(1) grayscale(0);
+            transform: scale(1.1);
+        }
+        .gallery .image:first-child {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+        }
+        .gallery .image:nth-child(2n+1) {
+            grid-row-start: span 2;
+        }
+        .gallery .image:nth-child(4n+6) {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+        }
+        @media only screen and (min-width : 480px) and (max-width : 768px) {
+            .gallery {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+        }
+        @media only screen and (min-width : 320px) and (max-width : 480px) {
+            .gallery {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+        }
+        @media only screen and (max-width: 320px) {
+            .gallery {
+                display: block;
+                max-width: 240px;
+            }
+
+            .gallery .image {
+                display: block;
+                margin: 2% 0;
+            }
+            .gallery .image img{
+                filter: brightness(1) grayscale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103088/800x600" alt="1">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103079/800x600" alt="2">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103061/800x600" alt="3">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103087/800x600" alt="4">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103086/800x600" alt="5">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103085/800x600" alt="6">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103074/800x600" alt="7">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103073/800x600" alt="8">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103082/800x600" alt="9">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103081/800x600" alt="10">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103098/800x600" alt="11">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103078/800x600" alt="12">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103035/800x600" alt="13">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103058/800x600" alt="14">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103048/800x600" alt="15">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103038/800x600" alt="16">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103048/800x600" alt="17">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103054/800x600" alt="18">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103049/800x600" alt="19">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103096/800x600" alt="20">
+        </div>
+    </div>
+</body>
+</html>
